@@ -17,3 +17,25 @@ colnames(flights)
 flights[1]
 flights$year
 flights[,1]
+
+select(flights, year)
+select(flights, year, month, day)
+select(flights, c(1:3))
+select(flights, year:day)
+select(flights, -year)
+flights
+flights_1 = select(flights, -(year:day))
+flights_1
+
+
+# helper functions
+# Keep columns whose names start with "sched"
+select(flights, starts_with("sched"))
+# Keep columns whose names end with "delay"
+select(flights, ends_with("delay"))
+# Keep columns whose names contain "arr"
+select(flights, contains("arr"))
+# Keep columns with two or more underscores (regular expression)
+select(flights, matches(".*_.*_.*")) # . denotes all digits and * denotes all character
+# Keep only the last column
+select(flights, last_col())
