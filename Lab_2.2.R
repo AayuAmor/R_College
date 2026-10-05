@@ -1,6 +1,6 @@
 library(tidyverse)
 
-data = mpg
+data <- mpg
 data
 ncol(data)
 nrow(data)
@@ -19,5 +19,4 @@ data$displ
 
 select(data, displ)
 
-ggplot(data, aes(x =hwy, y = cyl)) + geom_point()
-
+ggplot(data, aes(x = hwy, y = cyl)) + geom_point()

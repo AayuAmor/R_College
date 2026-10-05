@@ -3,7 +3,7 @@ print('hello world')
 install.packages("tidyverse")
 
 library(tidyverse)
-data = mpg
+data <- mpg
 print(data)
-ggplot(data,aes(x=hwy,y=cyl))+
+ggplot(data, aes(x = hwy, y = cyl)) +
   geom_point()
